@@ -1,0 +1,334 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D58C9222194F3184007AD8D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9221194F3184007AD8D5 /* Foundation.framework */; };
+		D58C9224194F3184007AD8D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9223194F3184007AD8D5 /* CoreGraphics.framework */; };
+		D58C9226194F3184007AD8D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9225194F3184007AD8D5 /* UIKit.framework */; };
+		D58C9269194F324A007AD8D5 /* ARAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C925B194F324A007AD8D5 /* ARAppDelegate.m */; };
+		D58C926A194F324A007AD8D5 /* ARViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C925D194F324A007AD8D5 /* ARViewController.m */; };
+		D58C926C194F324A007AD8D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D58C9260194F324A007AD8D5 /* Main.storyboard */; };
+		D58C926D194F324A007AD8D5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D58C9262194F324A007AD8D5 /* InfoPlist.strings */; };
+		D58C926E194F324A007AD8D5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D58C9264194F324A007AD8D5 /* Images.xcassets */; };
+		D58C926F194F324A007AD8D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C9265194F324A007AD8D5 /* main.m */; };
+		D58C9274194F3308007AD8D5 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C9273194F3308007AD8D5 /* NSDate+Extension.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D58C921E194F3184007AD8D5 /* NSDate-Extension Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSDate-Extension Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D58C9221194F3184007AD8D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		D58C9223194F3184007AD8D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D58C9225194F3184007AD8D5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		D58C925A194F324A007AD8D5 /* ARAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARAppDelegate.h; sourceTree = "<group>"; };
+		D58C925B194F324A007AD8D5 /* ARAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARAppDelegate.m; sourceTree = "<group>"; };
+		D58C925C194F324A007AD8D5 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		D58C925D194F324A007AD8D5 /* ARViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ARViewController.m; sourceTree = "<group>"; };
+		D58C9261194F324A007AD8D5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D58C9263194F324A007AD8D5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D58C9264194F324A007AD8D5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D58C9265194F324A007AD8D5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D58C9267194F324A007AD8D5 /* NSDate-Extension Example-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "NSDate-Extension Example-Info.plist"; sourceTree = "<group>"; };
+		D58C9268194F324A007AD8D5 /* NSDate-Extension Example-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate-Extension Example-Prefix.pch"; sourceTree = "<group>"; };
+		D58C9272194F3308007AD8D5 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		D58C9273194F3308007AD8D5 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D58C921B194F3184007AD8D5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58C9224194F3184007AD8D5 /* CoreGraphics.framework in Frameworks */,
+				D58C9226194F3184007AD8D5 /* UIKit.framework in Frameworks */,
+				D58C9222194F3184007AD8D5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D58C9215194F3184007AD8D5 = {
+			isa = PBXGroup;
+			children = (
+				D58C9259194F324A007AD8D5 /* NSDate-Extension Example */,
+				D58C9220194F3184007AD8D5 /* Frameworks */,
+				D58C921F194F3184007AD8D5 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D58C921F194F3184007AD8D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D58C921E194F3184007AD8D5 /* NSDate-Extension Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D58C9220194F3184007AD8D5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D58C9221194F3184007AD8D5 /* Foundation.framework */,
+				D58C9223194F3184007AD8D5 /* CoreGraphics.framework */,
+				D58C9225194F3184007AD8D5 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D58C9259194F324A007AD8D5 /* NSDate-Extension Example */ = {
+			isa = PBXGroup;
+			children = (
+				D58C9266194F324A007AD8D5 /* NSDate-Extension */,
+				D58C925A194F324A007AD8D5 /* ARAppDelegate.h */,
+				D58C925B194F324A007AD8D5 /* ARAppDelegate.m */,
+				D58C925C194F324A007AD8D5 /* ARViewController.h */,
+				D58C925D194F324A007AD8D5 /* ARViewController.m */,
+				D58C9260194F324A007AD8D5 /* Main.storyboard */,
+				D58C9264194F324A007AD8D5 /* Images.xcassets */,
+				D58C9271194F3256007AD8D5 /* Supporting Files */,
+			);
+			path = "NSDate-Extension Example";
+			sourceTree = "<group>";
+		};
+		D58C9266194F324A007AD8D5 /* NSDate-Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D58C9272194F3308007AD8D5 /* NSDate+Extension.h */,
+				D58C9273194F3308007AD8D5 /* NSDate+Extension.m */,
+			);
+			path = "NSDate-Extension";
+			sourceTree = "<group>";
+		};
+		D58C9271194F3256007AD8D5 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D58C9267194F324A007AD8D5 /* NSDate-Extension Example-Info.plist */,
+				D58C9262194F324A007AD8D5 /* InfoPlist.strings */,
+				D58C9265194F324A007AD8D5 /* main.m */,
+				D58C9268194F324A007AD8D5 /* NSDate-Extension Example-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D58C921D194F3184007AD8D5 /* NSDate-Extension Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D58C9253194F3185007AD8D5 /* Build configuration list for PBXNativeTarget "NSDate-Extension Example" */;
+			buildPhases = (
+				D58C921A194F3184007AD8D5 /* Sources */,
+				D58C921B194F3184007AD8D5 /* Frameworks */,
+				D58C921C194F3184007AD8D5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "NSDate-Extension Example";
+			productName = "NSDate-Extension";
+			productReference = D58C921E194F3184007AD8D5 /* NSDate-Extension Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D58C9216194F3184007AD8D5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AR;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = alexruperez;
+			};
+			buildConfigurationList = D58C9219194F3184007AD8D5 /* Build configuration list for PBXProject "NSDate-Extension Example" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D58C9215194F3184007AD8D5;
+			productRefGroup = D58C921F194F3184007AD8D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D58C921D194F3184007AD8D5 /* NSDate-Extension Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D58C921C194F3184007AD8D5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58C926E194F324A007AD8D5 /* Images.xcassets in Resources */,
+				D58C926D194F324A007AD8D5 /* InfoPlist.strings in Resources */,
+				D58C926C194F324A007AD8D5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D58C921A194F3184007AD8D5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D58C9274194F3308007AD8D5 /* NSDate+Extension.m in Sources */,
+				D58C9269194F324A007AD8D5 /* ARAppDelegate.m in Sources */,
+				D58C926F194F324A007AD8D5 /* main.m in Sources */,
+				D58C926A194F324A007AD8D5 /* ARViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D58C9260194F324A007AD8D5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58C9261194F324A007AD8D5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D58C9262194F324A007AD8D5 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D58C9263194F324A007AD8D5 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D58C9251194F3184007AD8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D58C9252194F3184007AD8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D58C9254194F3185007AD8D5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDate-Extension Example/NSDate-Extension Example-Prefix.pch";
+				INFOPLIST_FILE = "NSDate-Extension Example/NSDate-Extension Example-Info.plist";
+				PRODUCT_NAME = "NSDate-Extension Example";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D58C9255194F3185007AD8D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "NSDate-Extension Example/NSDate-Extension Example-Prefix.pch";
+				INFOPLIST_FILE = "NSDate-Extension Example/NSDate-Extension Example-Info.plist";
+				PRODUCT_NAME = "NSDate-Extension Example";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D58C9219194F3184007AD8D5 /* Build configuration list for PBXProject "NSDate-Extension Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58C9251194F3184007AD8D5 /* Debug */,
+				D58C9252194F3184007AD8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D58C9253194F3185007AD8D5 /* Build configuration list for PBXNativeTarget "NSDate-Extension Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D58C9254194F3185007AD8D5 /* Debug */,
+				D58C9255194F3185007AD8D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D58C9216194F3184007AD8D5 /* Project object */;
+}
