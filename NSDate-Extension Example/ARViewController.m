@@ -35,7 +35,7 @@
     self.numberLabel.text = [NSString stringWithFormat:@"%.0f", self.stepper.value];
     
     NSNumber *stepperValue = @(self.stepper.value);
-    NSDateComponents *components;
+    NSDateComponents *components = nil;
     NSCalendarUnit calendarUnit = 0;
     
     switch (self.unitControl.selectedSegmentIndex)

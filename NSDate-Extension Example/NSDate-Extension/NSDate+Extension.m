@@ -138,7 +138,7 @@
 
 - (NSUInteger)calendarUnits
 {
-    NSUInteger calendarUnits;
+    NSUInteger calendarUnits = 0;
     for (NSNumber *calendarUnit in NSCalendarUnitsKeyPaths.allKeys)
     {
         calendarUnits |= [calendarUnit integerValue];
