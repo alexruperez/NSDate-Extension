@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
 @property (weak, nonatomic) IBOutlet UILabel *numberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *resultLabel;
+@property (weak, nonatomic) IBOutlet UILabel *lapseLabel;
 
 @end
 
@@ -25,12 +26,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-
-    [self refresh];
     
-    NSLog(@"%@", [[[NSDate date] get:[@(11).days and:@(2).months].ago] lapse:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSCalendarUnitHour fromDate:[NSDate date]]);
-    NSLog(@"%@", [[NSDate date] lapse:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit|NSCalendarUnitHour toDate:[[NSDate date] get:[@(11).days and:@(2).months].ago]]);
+    [self refresh];
 }
 
 - (IBAction)refresh
@@ -39,26 +36,33 @@
     
     NSNumber *stepperValue = @(self.stepper.value);
     NSDateComponents *components;
+    NSCalendarUnit calendarUnit;
     
     switch (self.unitControl.selectedSegmentIndex)
     {
         case 0:
             components = stepperValue.years;
+            calendarUnit = NSCalendarUnitYear;
             break;
         case 1:
             components = stepperValue.months;
+            calendarUnit = NSCalendarUnitMonth;
             break;
         case 2:
             components = stepperValue.days;
+            calendarUnit = NSCalendarUnitDay;
             break;
         case 3:
             components = stepperValue.hours;
+            calendarUnit = NSCalendarUnitHour;
             break;
         case 4:
             components = stepperValue.minutes;
+            calendarUnit = NSCalendarUnitMinute;
             break;
         case 5:
             components = stepperValue.seconds;
+            calendarUnit = NSCalendarUnitSecond;
             break;
         default:
             break;
@@ -73,7 +77,10 @@
         components = components.ago;
     }
     
-    self.resultLabel.text = [NSString stringWithFormat:@"%@", [self.datePicker.date get:components]];
+    NSDate *date = [self.datePicker.date get:components];
+    
+    self.resultLabel.text = [NSString stringWithFormat:@"%@", date];
+    self.lapseLabel.text = [NSString stringWithFormat:@"Lapse:\n%@", [self.datePicker.date lapse:calendarUnit fromDate:date]];
 }
 
 @end
