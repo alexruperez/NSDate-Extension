@@ -36,7 +36,7 @@
     
     NSNumber *stepperValue = @(self.stepper.value);
     NSDateComponents *components;
-    NSCalendarUnit calendarUnit;
+    NSCalendarUnit calendarUnit = 0;
     
     switch (self.unitControl.selectedSegmentIndex)
     {

@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = '0.0.1'
   s.summary      = "Use NSDate-Extension to handle NSDate objects easily."
   s.homepage     = 'http://github.com/alexruperez/NSDate-Extension'
-  s.screenshots  = 'http://raw.githubusercontent.com/alexruperez/NSDate-Extension/master/Example.png'
+  s.screenshots  = 'https://raw.githubusercontent.com/alexruperez/NSDate-Extension/master/Example.png'
   s.license      = 'MIT'
   s.author       = { "alexruperez" => "contact@alexruperez.com" }
   s.social_media_url   = 'http://twitter.com/alexruperez'
