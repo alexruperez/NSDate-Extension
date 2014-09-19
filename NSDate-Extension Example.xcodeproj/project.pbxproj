@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D549693A19CC5D0300828967 /* NSDate_Extension_Example_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D549693919CC5D0300828967 /* NSDate_Extension_Example_Tests.m */; };
 		D58C9222194F3184007AD8D5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9221194F3184007AD8D5 /* Foundation.framework */; };
 		D58C9224194F3184007AD8D5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9223194F3184007AD8D5 /* CoreGraphics.framework */; };
 		D58C9226194F3184007AD8D5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D58C9225194F3184007AD8D5 /* UIKit.framework */; };
@@ -19,7 +20,20 @@
 		D58C9274194F3308007AD8D5 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = D58C9273194F3308007AD8D5 /* NSDate+Extension.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		D549693B19CC5D0300828967 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D58C9216194F3184007AD8D5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D58C921D194F3184007AD8D5;
+			remoteInfo = "NSDate-Extension Example";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		D549693519CC5D0300828967 /* NSDate-Extension Example Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NSDate-Extension Example Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D549693819CC5D0300828967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D549693919CC5D0300828967 /* NSDate_Extension_Example_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSDate_Extension_Example_Tests.m; sourceTree = "<group>"; };
 		D58C921E194F3184007AD8D5 /* NSDate-Extension Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NSDate-Extension Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D58C9221194F3184007AD8D5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D58C9223194F3184007AD8D5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -39,6 +53,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D549693219CC5D0300828967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C921B194F3184007AD8D5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -52,10 +73,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D549693619CC5D0300828967 /* NSDate-Extension Example Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D549693919CC5D0300828967 /* NSDate_Extension_Example_Tests.m */,
+				D549693719CC5D0300828967 /* Supporting Files */,
+			);
+			path = "NSDate-Extension Example Tests";
+			sourceTree = "<group>";
+		};
+		D549693719CC5D0300828967 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D549693819CC5D0300828967 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D58C9215194F3184007AD8D5 = {
 			isa = PBXGroup;
 			children = (
 				D58C9259194F324A007AD8D5 /* NSDate-Extension Example */,
+				D549693619CC5D0300828967 /* NSDate-Extension Example Tests */,
 				D58C9220194F3184007AD8D5 /* Frameworks */,
 				D58C921F194F3184007AD8D5 /* Products */,
 			);
@@ -65,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D58C921E194F3184007AD8D5 /* NSDate-Extension Example.app */,
+				D549693519CC5D0300828967 /* NSDate-Extension Example Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +157,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		D549693419CC5D0300828967 /* NSDate-Extension Example Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D549693D19CC5D0400828967 /* Build configuration list for PBXNativeTarget "NSDate-Extension Example Tests" */;
+			buildPhases = (
+				D549693119CC5D0300828967 /* Sources */,
+				D549693219CC5D0300828967 /* Frameworks */,
+				D549693319CC5D0300828967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D549693C19CC5D0300828967 /* PBXTargetDependency */,
+			);
+			name = "NSDate-Extension Example Tests";
+			productName = "NSDate-Extension Example Tests";
+			productReference = D549693519CC5D0300828967 /* NSDate-Extension Example Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		D58C921D194F3184007AD8D5 /* NSDate-Extension Example */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D58C9253194F3185007AD8D5 /* Build configuration list for PBXNativeTarget "NSDate-Extension Example" */;
@@ -143,6 +201,12 @@
 				CLASSPREFIX = AR;
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = alexruperez;
+				TargetAttributes = {
+					D549693419CC5D0300828967 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = D58C921D194F3184007AD8D5;
+					};
+				};
 			};
 			buildConfigurationList = D58C9219194F3184007AD8D5 /* Build configuration list for PBXProject "NSDate-Extension Example" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -158,11 +222,19 @@
 			projectRoot = "";
 			targets = (
 				D58C921D194F3184007AD8D5 /* NSDate-Extension Example */,
+				D549693419CC5D0300828967 /* NSDate-Extension Example Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D549693319CC5D0300828967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C921C194F3184007AD8D5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -176,6 +248,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D549693119CC5D0300828967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D549693A19CC5D0300828967 /* NSDate_Extension_Example_Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D58C921A194F3184007AD8D5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -188,6 +268,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D549693C19CC5D0300828967 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D58C921D194F3184007AD8D5 /* NSDate-Extension Example */;
+			targetProxy = D549693B19CC5D0300828967 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		D58C9260194F324A007AD8D5 /* Main.storyboard */ = {
@@ -209,6 +297,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D549693E19CC5D0400828967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NSDate-Extension Example Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSDate-Extension Example.app/NSDate-Extension Example";
+			};
+			name = Debug;
+		};
+		D549693F19CC5D0400828967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "NSDate-Extension Example Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NSDate-Extension Example.app/NSDate-Extension Example";
+			};
+			name = Release;
+		};
 		D58C9251194F3184007AD8D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -241,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -274,7 +400,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -310,6 +436,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D549693D19CC5D0400828967 /* Build configuration list for PBXNativeTarget "NSDate-Extension Example Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D549693E19CC5D0400828967 /* Debug */,
+				D549693F19CC5D0400828967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D58C9219194F3184007AD8D5 /* Build configuration list for PBXProject "NSDate-Extension Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -223,17 +223,17 @@
 
 - (NSDate *)get:(NSDateComponents *)components
 {
-    return [NSCalendar.autoupdatingCurrentCalendar dateByAddingComponents:components toDate:self options:NSCalendarWrapComponents];
+    return [NSCalendar.autoupdatingCurrentCalendar dateByAddingComponents:components toDate:self options:kNilOptions];
 }
 
 - (NSDateComponents *)lapse:(NSCalendarUnit)calendarUnit fromDate:(NSDate *)date
 {
-    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:date toDate:self options:NSCalendarWrapComponents];
+    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:date toDate:self options:kNilOptions];
 }
 
 - (NSDateComponents *)lapse:(NSCalendarUnit)calendarUnit toDate:(NSDate *)date
 {
-    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:self toDate:date options:NSCalendarWrapComponents];
+    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:self toDate:date options:kNilOptions];
 }
 
 @end
