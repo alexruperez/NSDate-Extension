@@ -80,7 +80,7 @@
     NSDate *date = [self.datePicker.date get:components];
     
     self.resultLabel.text = [NSString stringWithFormat:@"%@", date];
-    self.lapseLabel.text = [NSString stringWithFormat:@"Lapse:\n%@", [self.datePicker.date lapse:calendarUnit fromDate:date]];
+    self.lapseLabel.text = [NSString stringWithFormat:@"Lapse:\n%@", [self.datePicker.date lapse:calendarUnit toDate:date]];
 }
 
 @end
