@@ -11,8 +11,8 @@
 #import "NSDate+Extension.h"
 
 
-static NSInteger const iterateFrom = -30;
-static NSInteger const iterateTo = 4;
+static NSInteger const iterateFrom = -100;
+static NSInteger const iterateTo = 100;
 
 
 @interface NSDate_Extension_Example_Tests : XCTestCase
@@ -319,136 +319,6 @@ static NSInteger const iterateTo = 4;
         XCTAssertTrue(result.weekOfMonth == -i);
         XCTAssertTrue(result.weekOfYear == -i);
         XCTAssertTrue(result.yearForWeekOfYear == -i);
-    }
-}
-
-- (void)testGetEra
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).era];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).era.before]]);
-    }
-}
-
-- (void)testGetYear
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).year];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).year.before]]);
-    }
-}
-
-- (void)testGetMonth
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).month];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).month.before]]);
-    }
-}
-
-- (void)testGetDay
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).day];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).day.before]]);
-    }
-}
-
-- (void)testGetHour
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).hour];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).hour.before]]);
-    }
-}
-
-- (void)testGetMinute
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).minute];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).minute.before]]);
-    }
-}
-
-- (void)testGetSecond
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).second];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).second.before]]);
-    }
-}
-
-- (void)testGetWeekday
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).weekday];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).weekday.before]]);
-    }
-}
-
-- (void)testGetWeekdayOrdinal
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).weekdayOrdinal];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).weekdayOrdinal.before]]);
-    }
-}
-
-- (void)testGetQuarter
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).quarter];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).quarter.before]]);
-    }
-}
-
-- (void)testGetWeekOfMonth
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).weekOfMonth];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).weekOfMonth.before]]);
-    }
-}
-
-- (void)testGetWeekOfYear
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).weekOfYear];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).weekOfYear.before]]);
-    }
-}
-
-- (void)testGetYearForWeekOfYear
-{
-    for (NSInteger i = iterateFrom; i < iterateTo; i++)
-    {
-        NSDate *original = NSDate.date;
-        NSDate *result = [original get:@(i).yearForWeekOfYear];
-        XCTAssertTrue([original isEqualToDate:[result get:@(i).yearForWeekOfYear.before]]);
     }
 }
 

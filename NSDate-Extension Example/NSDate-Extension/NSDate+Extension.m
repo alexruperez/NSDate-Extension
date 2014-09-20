@@ -8,14 +8,14 @@
 
 #import "NSDate+Extension.h"
 
-#define NSCalendarUnitsKeyPaths @{ @(NSCalendarUnitEra): @"era", @(NSCalendarUnitYear): @"year", @(NSCalendarUnitMonth): @"month", @(NSCalendarUnitDay): @"day", @(NSCalendarUnitHour): @"hour", @(NSCalendarUnitMinute): @"minute", @(NSCalendarUnitSecond): @"second", @(NSCalendarUnitWeekday): @"weekday", @(NSCalendarUnitWeekdayOrdinal): @"weekdayOrdinal", @(NSCalendarUnitQuarter): @"quarter", @(NSCalendarUnitWeekOfMonth): @"weekOfMonth", @(NSCalendarUnitWeekOfYear): @"weekOfYear", @(NSCalendarUnitYearForWeekOfYear): @"yearForWeekOfYear" }
+#define NSCalendarUnitsKeys @{ @(NSCalendarUnitEra): @"era", @(NSCalendarUnitYear): @"year", @(NSCalendarUnitMonth): @"month", @(NSCalendarUnitDay): @"day", @(NSCalendarUnitHour): @"hour", @(NSCalendarUnitMinute): @"minute", @(NSCalendarUnitSecond): @"second", @(NSCalendarUnitWeekday): @"weekday", @(NSCalendarUnitWeekdayOrdinal): @"weekdayOrdinal", @(NSCalendarUnitQuarter): @"quarter", @(NSCalendarUnitWeekOfMonth): @"weekOfMonth", @(NSCalendarUnitWeekOfYear): @"weekOfYear", @(NSCalendarUnitYearForWeekOfYear): @"yearForWeekOfYear" }
 
 @implementation NSNumber (Extension)
 
 - (NSDateComponents *)dateComponentsForCalendarUnit:(NSCalendarUnit)calendarUnit
 {
     NSDateComponents *components = NSDateComponents.new;
-    [components setValue:self forKeyPath:NSCalendarUnitsKeyPaths[@(calendarUnit)]];
+    [components setValue:self forKey:NSCalendarUnitsKeys[@(calendarUnit)]];
     return components;
 }
 
@@ -90,44 +90,44 @@
 
 - (void)invertValueForCalendarUnit:(NSCalendarUnit)calendarUnit
 {
-    NSString *keyPath = NSCalendarUnitsKeyPaths[@(calendarUnit)];
-    NSInteger value = [[self valueForKeyPath:keyPath] integerValue];
-    if (value != LONG_MAX)
+    NSString *key = NSCalendarUnitsKeys[@(calendarUnit)];
+    NSInteger value = [[self valueForKey:key] integerValue];
+    value = value != NSIntegerMax ? -value : NSIntegerMax;
+    if (value != NSIntegerMax)
     {
-        [self setValue:@(-value) forKeyPath:keyPath];
+        [self setValue:@(value) forKey:key];
     }
 }
 
 - (void)addComponents:(NSDateComponents *)components forCalendarUnit:(NSCalendarUnit)calendarUnit
 {
-    NSString *keyPath = NSCalendarUnitsKeyPaths[@(calendarUnit)];
-    NSInteger currentValue = [[self valueForKeyPath:keyPath] integerValue];
-    NSInteger componentsValue = [[components valueForKeyPath:keyPath] integerValue];
-    NSInteger newValue = currentValue != LONG_MAX ? currentValue : LONG_MAX;
-    if (componentsValue != LONG_MAX)
+    NSString *key = NSCalendarUnitsKeys[@(calendarUnit)];
+    NSInteger value = [[self valueForKey:key] integerValue];
+    NSInteger componentsValue = [[components valueForKey:key] integerValue];
+    if (componentsValue != NSIntegerMax)
     {
-        newValue = newValue != LONG_MAX ? newValue + componentsValue : componentsValue;
+        value = value != NSIntegerMax ? value + componentsValue : componentsValue;
     }
-    if (newValue != LONG_MAX)
+    if (value != NSIntegerMax)
     {
-        [self setValue:@(newValue) forKeyPath:keyPath];
+        [self setValue:@(value) forKey:key];
     }
 }
 
 - (NSDateComponents *)before
 {
-    for (NSNumber *calendarUnit in NSCalendarUnitsKeyPaths.allKeys)
+    for (NSNumber *calendarUnit in NSCalendarUnitsKeys.allKeys)
     {
-        [self invertValueForCalendarUnit:[calendarUnit integerValue]];
+        [self invertValueForCalendarUnit:[calendarUnit unsignedIntegerValue]];
     }
     return self;
 }
 
 - (NSDateComponents *)and:(NSDateComponents *)components
 {
-    for (NSNumber *calendarUnit in NSCalendarUnitsKeyPaths.allKeys)
+    for (NSNumber *calendarUnit in NSCalendarUnitsKeys.allKeys)
     {
-        [self addComponents:components forCalendarUnit:[calendarUnit integerValue]];
+        [self addComponents:components forCalendarUnit:[calendarUnit unsignedIntegerValue]];
     }
     return self;
 }
@@ -136,12 +136,19 @@
 
 @implementation NSDate (Extension)
 
-- (NSUInteger)calendarUnits
+- (NSCalendar *)calendar
 {
-    NSUInteger calendarUnits = 0;
-    for (NSNumber *calendarUnit in NSCalendarUnitsKeyPaths.allKeys)
+    NSCalendar *calendar = NSCalendar.autoupdatingCurrentCalendar;
+    calendar.locale = NSLocale.autoupdatingCurrentLocale;
+    return calendar;
+}
+
+- (NSCalendarUnit)calendarUnits
+{
+    NSCalendarUnit calendarUnits = 0;
+    for (NSNumber *calendarUnit in NSCalendarUnitsKeys.allKeys)
     {
-        calendarUnits |= [calendarUnit integerValue];
+        calendarUnits |= [calendarUnit unsignedIntegerValue];
     }
     return calendarUnits;
 }
@@ -153,7 +160,7 @@
 
 - (NSInteger)dateComponentForCalendarUnit:(NSCalendarUnit)calendarUnit
 {
-    return [[self.dateComponents valueForKeyPath:NSCalendarUnitsKeyPaths[@(calendarUnit)]] integerValue];
+    return [[self.dateComponents valueForKey:NSCalendarUnitsKeys[@(calendarUnit)]] integerValue];
 }
 
 - (NSInteger)era
@@ -223,17 +230,17 @@
 
 - (NSDate *)get:(NSDateComponents *)components
 {
-    return [NSCalendar.autoupdatingCurrentCalendar dateByAddingComponents:components toDate:self options:kNilOptions];
+    return [self.calendar dateByAddingComponents:components toDate:self options:kNilOptions];
 }
 
 - (NSDateComponents *)lapse:(NSCalendarUnit)calendarUnit fromDate:(NSDate *)date
 {
-    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:date toDate:self options:kNilOptions];
+    return [self.calendar components:calendarUnit fromDate:date toDate:self options:kNilOptions];
 }
 
 - (NSDateComponents *)lapse:(NSCalendarUnit)calendarUnit toDate:(NSDate *)date
 {
-    return [NSCalendar.autoupdatingCurrentCalendar components:calendarUnit fromDate:self toDate:date options:kNilOptions];
+    return [self.calendar components:calendarUnit fromDate:self toDate:date options:kNilOptions];
 }
 
 @end
