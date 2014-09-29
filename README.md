@@ -1,5 +1,5 @@
 # NSDate-Extension
-[![GitHub Issues](http://img.shields.io/github/issues/alexruperez/NSDate-Extension.svg)](http://github.com/alexruperez/NSDate-Extension)
+[![GitHub Issues](http://img.shields.io/github/issues/alexruperez/NSDate-Extension.svg)](http://github.com/alexruperez/NSDate-Extension/issues)
 [![Build Status](https://travis-ci.org/alexruperez/NSDate-Extension.svg?branch=master)](https://travis-ci.org/alexruperez/NSDate-Extension)
 [![License Status](http://img.shields.io/cocoapods/l/NSDate-Extension.svg)](http://opensource.org/licenses/MIT)
 [![Platform Status](http://img.shields.io/cocoapods/p/NSDate-Extension.svg)](https://developer.apple.com)
