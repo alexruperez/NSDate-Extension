@@ -1,4 +1,4 @@
 language: objective-c
 xcode_project: NSDate-Extension Example.xcodeproj
 xcode_scheme: NSDate-Extension Example
-xcode_sdk: iphonesimulator7.1
+xcode_sdk: iphonesimulator7.0
