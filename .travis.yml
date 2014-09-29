@@ -1,2 +1,5 @@
 language: objective-c
-script: xctool -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -sdk iphonesimulator7.0 clean build test
+before_install:
+	- brew update
+  - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
+script: "xctool -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -sdk iphonesimulator clean build test"
