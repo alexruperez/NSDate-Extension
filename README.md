@@ -1,4 +1,5 @@
 # NSDate-Extension
+[![Build Status](https://travis-ci.org/alexruperez/NSDate-Extension.svg?branch=master)](https://travis-ci.org/alexruperez/NSDate-Extension)
 
 ## Example
 ```objectivec
