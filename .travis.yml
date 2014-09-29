@@ -1,5 +1,2 @@
 language: objective-c
-before_install:
-    - brew update
-    - brew install xctool
 script: xctool -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -sdk iphonesimulator7.0 clean build test
