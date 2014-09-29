@@ -1,5 +1,5 @@
 # NSDate-Extension
-[![Build Status](https://travis-ci.org/alexruperez/NSDate-Extension.svg?branch=master)](https://travis-ci.org/alexruperez/NSDate-Extension)[![Coverage Status](https://img.shields.io/coveralls/alexruperez/NSDate-Extension.svg)](https://coveralls.io/r/alexruperez/NSDate-Extension)
+[![Build Status](https://travis-ci.org/alexruperez/NSDate-Extension.svg?branch=master)](https://travis-ci.org/alexruperez/NSDate-Extension) [![Coverage Status](https://img.shields.io/coveralls/alexruperez/NSDate-Extension.svg)](https://coveralls.io/r/alexruperez/NSDate-Extension)
 
 ## Example
 ```objectivec
