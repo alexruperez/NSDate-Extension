@@ -5,6 +5,7 @@
 [![Platform Status](http://img.shields.io/cocoapods/p/NSDate-Extension.svg?style=flat)](https://developer.apple.com)
 [![Pod Status](http://img.shields.io/cocoapods/v/NSDate-Extension.svg?style=flat)](https://github.com/CocoaPods/Specs/blob/master/Specs/NSDate-Extension/0.0.2/NSDate-Extension.podspec.json)
 [![Dependency Status](https://www.versioneye.com/objective-c/nsdate-extension/0.0.2/badge.svg?style=flat)](https://www.versioneye.com/objective-c/nsdate-extension/0.0.2)
+[![Analytics](https://ga-beacon.appspot.com/UA-55329295-1/NSDate-Extension/readme)](https://github.com/igrigorik/ga-beacon)
 
 ## Example
 ```objectivec
