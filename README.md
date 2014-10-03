@@ -1,4 +1,6 @@
 # NSDate-Extension
+
+[![Twitter](http://img.shields.io/badge/contact-@alexruperez-blue.svg?style=flat)](http://twitter.com/alexruperez)
 [![GitHub Issues](http://img.shields.io/github/issues/alexruperez/NSDate-Extension.svg?style=flat)](http://github.com/alexruperez/NSDate-Extension/issues)
 [![Build Status](http://img.shields.io/travis/alexruperez/NSDate-Extension.svg?style=flat)](https://travis-ci.org/alexruperez/NSDate-Extension)
 [![License Status](http://img.shields.io/cocoapods/l/NSDate-Extension.svg?style=flat)](http://opensource.org/licenses/MIT)
