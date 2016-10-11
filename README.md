@@ -9,6 +9,8 @@
 [![Dependency Status](https://www.versioneye.com/objective-c/nsdate-extension/0.0.2/badge.svg?style=flat)](https://www.versioneye.com/objective-c/nsdate-extension/0.0.2)
 [![Analytics](https://ga-beacon.appspot.com/UA-55329295-1/NSDate-Extension/readme?pixel)](https://github.com/igrigorik/ga-beacon)
 
+Looking for a Swift version? Try [malcommac](http://github.com/malcommac)/[SwiftDate](http://malcommac.github.io/SwiftDate/)!
+
 ## Example
 ```objectivec
 [[NSDate date] get:@(8).days.ago];
