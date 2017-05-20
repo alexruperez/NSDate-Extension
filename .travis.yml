@@ -1,5 +1,9 @@
 language: objective-c
-before_install:
-    - brew update
-    - if brew outdated | grep -qx xctool; then brew upgrade xctool; fi
-script: xctool -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -sdk iphonesimulator clean build test
+
+osx_image: xcode8.3
+
+script:
+- xcodebuild -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" -configuration Debug -enableCodeCoverage YES clean build test
+
+after_success:
+- bash <(curl -s https://codecov.io/bash)
