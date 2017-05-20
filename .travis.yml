@@ -1,9 +1,9 @@
 language: objective-c
 
-osx_image: xcode8.3
+osx_image: xcode6.4
 
 script:
-- xcodebuild -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -destination "platform=iOS Simulator,name=iPhone 7,OS=10.3" -configuration Debug -enableCodeCoverage YES clean build test
+- xcodebuild -project NSDate-Extension\ Example.xcodeproj -scheme NSDate-Extension\ Example -destination "platform=iOS Simulator,name=iPhone 5,OS=6.0" -configuration Debug -enableCodeCoverage YES clean build test
 
 after_success:
 - bash <(curl -s https://codecov.io/bash)
